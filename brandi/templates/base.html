@@ -6,23 +6,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-
         {% block title %}
-        <!-- 이부분에 tab에 나타나는 페이지 제목을 작성해줍니다. -->
-        {% endblock %}
 
+        {% endblock %}
     </title>
 
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-    <!-- 이부분에 공통된 css나 head에 들어가야할 내용을 작성해줍니다.  -->
+
     {% block extrahead %}
-    <!-- 페이지별로 특정 css나 head에 들어가야하는 애를 작성해줍니다. -->
+
     {% endblock %}
 </head>
 
 <body>
-    <nav>글로벌네브바! <a href="{% url 'index' %}">홈으로</a> <a href="{% url 'second' %}">
-            <second-page>second-page</second-page>
+    <nav><a href="{% url 'index' %}">Home</a> <a href="{% url 'second' %}">
+            <second-page>Next</second-page>
         </a> </nav>
     <!-- 모든페이지에 공통적으로 들어가야할 요소들 -->
 

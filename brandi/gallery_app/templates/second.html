@@ -1,18 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    {% block extrahead %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="static/second.css">
+    <!-- <link rel="stylesheet" type="text/css" href="static/second.css"> -->
+    <link rel="stylesheet" href="{% static 'css/second.css' %}">
+    {% endblock %}
 </head>
 
 <body>
+    {% block contents %}
     <div>Goodbye!</div>
     <a href="{% url 'index' %}">
         <span>
             <<<<< </span>
+
+                {% endblock %}
 </body>
 
 </html>
